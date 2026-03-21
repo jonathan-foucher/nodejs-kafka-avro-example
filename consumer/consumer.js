@@ -8,7 +8,7 @@ CompressionCodecs[CompressionTypes.ZSTD] = ZstdCodec()
 const registry = new SchemaRegistry({ host: 'http://localhost:8181' })
 const kafka = new Kafka({
   clientId: 'movie-consumer-app',
-  brokers: [ 'localhost:9093' ]
+  brokers: [ 'localhost:9094' ]
 })
 
 const getValueToDisplay = (data) => {

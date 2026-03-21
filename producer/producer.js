@@ -12,7 +12,7 @@ const valueSchemaId = await registry.getRegistryId('kafka_example_movie_avro-val
 
 const kafka = new Kafka({
   clientId: 'movie-producer-app',
-  brokers: [ 'localhost:9093' ]
+  brokers: [ 'localhost:9094' ]
 })
 
 // silence kafkajs no partitioner warning

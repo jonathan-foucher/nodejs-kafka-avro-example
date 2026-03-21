@@ -10,10 +10,9 @@ The repository contains two node projects :
 To deploy the kafka required environment you will need docker installed and run the `docker/docker-compose.yml` file.
 
 It will launch different containers:
-- zookeeper
 - kafka
 - schema-registry
-- akhq: a browser GUI to check out topics, messages and schemas
+- kafka-ui: a browser GUI to check out topics, messages and schemas
 - init-kafka: init container to create the required Kafka topic and schemas
 
 
@@ -21,7 +20,7 @@ It will launch different containers:
 docker-compose -f docker/docker-compose.yml up -d
 ```
 
-You will be able to access akhq on [this url](http://localhost:8190/)
+You will be able to access kafka-ui on [this url](http://localhost:9090/)
 
 ### Application
 Once the Kafka environment started and healthy, you can install the dependencies, start the node projects and try them out.
@@ -29,7 +28,7 @@ Once the Kafka environment started and healthy, you can install the dependencies
 #### Consumer
 Install the dependencies (inside the consumer directory)
 ```
-npm i
+npm --prefix ./consumer i
 ```
 
 Start the consumer
@@ -40,7 +39,7 @@ node consumer/main.js
 #### Producer
 Install the dependencies (inside the producer directory)
 ```
-npm i
+npm --prefix ./producer i
 ```
 
 Start the producer
